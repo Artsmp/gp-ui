@@ -5,13 +5,21 @@
         "packages/*"
     ],
     "scripts": {
+        "prepare": "husky install",
+        "commit": "npx git-cz",
         "bootstrap": "lerna bootstrap -- --hoist",
         "dev": "lerna run --scope play dev",
         "pub:package": "lerna publish from-package --yes"
     },
     "devDependencies": {
+        "@commitlint/cli": "^17.4.4",
+        "@commitlint/config-conventional": "^17.4.4",
+        "commitizen": "^4.3.0",
+        "cz-conventional-changelog": "^3.3.0",
         "eslint": "^8.35.0",
+        "husky": "^8.0.3",
         "lerna": "^6.5.1",
+        "lint-staged": "^13.1.2",
         "prettier": "^2.8.4",
         "typescript": "^4.9.5"
     },
