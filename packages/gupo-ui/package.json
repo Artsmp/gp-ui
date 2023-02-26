@@ -1,0 +1,37 @@
+{
+  "name": "gupo-ui",
+  "version": "0.0.0",
+  "description": "pro components based on vue3",
+  "keywords": [
+    "vue3",
+    "components",
+    "lib",
+    "ui",
+    "typescript",
+    "antdv",
+    "vant"
+  ],
+  "main": "index.js",
+  "author": "shenmengping <shen990206@gmail.com>",
+  "homepage": "https://github.com/Artsmp/gp-ui#readme",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artsmp/gp-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Artsmp/gp-ui/issues"
+  },
+  "scripts": {
+    "test": "node ./__tests__/gupo-ui.test.js"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  }
+}
