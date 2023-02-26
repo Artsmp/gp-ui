@@ -1,5 +1,11 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div>icon</div>
+  <div class="icon">icon</div>
 </template>
+
+<style lang="less" scoped>
+.icon {
+  color: red;
+}
+</style>

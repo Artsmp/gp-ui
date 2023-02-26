@@ -6,7 +6,8 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap -- --hoist",
-    "dev": "lerna run --scope play dev"
+    "dev": "lerna run --scope play dev",
+    "pub:package": "lerna publish from-package --yes"
   },
   "devDependencies": {
     "lerna": "^6.5.1"
