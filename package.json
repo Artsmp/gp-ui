@@ -1,15 +1,19 @@
 {
-  "name": "root",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
-  "scripts": {
-    "bootstrap": "lerna bootstrap -- --hoist",
-    "dev": "lerna run --scope play dev",
-    "pub:package": "lerna publish from-package --yes"
-  },
-  "devDependencies": {
-    "lerna": "^6.5.1"
-  }
+    "name": "root",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "bootstrap": "lerna bootstrap -- --hoist",
+        "dev": "lerna run --scope play dev",
+        "pub:package": "lerna publish from-package --yes"
+    },
+    "devDependencies": {
+        "eslint": "^8.35.0",
+        "lerna": "^6.5.1",
+        "prettier": "^2.8.4",
+        "typescript": "^4.9.5"
+    },
+    "dependencies": {}
 }

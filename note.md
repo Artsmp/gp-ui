@@ -50,3 +50,5 @@
   }
 }
 ```
+
+为某个子包安装依赖：`yarn workspace @gupo/eslint-config add eslint-config-prettier eslint-plugin-prettier`
