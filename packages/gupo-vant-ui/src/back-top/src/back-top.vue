@@ -26,7 +26,6 @@ import { createNamespace } from '../../utils';
 import { backTopProps } from './props';
 
 const [_, bem] = createNamespace('back-top');
-console.log('_, bem(): ', _, bem());
 
 const props = defineProps(backTopProps);
 const emit = defineEmits(['click']);

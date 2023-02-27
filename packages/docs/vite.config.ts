@@ -5,6 +5,10 @@ import { VantResolver } from 'unplugin-vue-components/resolvers';
 import { GpResolver } from 'gupo-vant-ui/lib/resolver';
 
 export default defineConfig({
+    // 不能排除掉vant：https://github.com/vuejs/vitepress/issues/1465
+    ssr: {
+        noExternal: 'vant',
+    },
     resolve: {
         alias: [
             {
