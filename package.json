@@ -10,7 +10,10 @@
         "bootstrap": "lerna bootstrap -- --hoist",
         "dev": "lerna run --scope play dev",
         "pub:package": "lerna publish from-package --yes",
-        "build:vant": "lerna run --scope gupo-vant-ui build"
+        "build:vant": "lerna run --scope gupo-vant-ui build",
+        "dev:docs": "lerna run --scope docs dev",
+        "build:docs": "lerna run --scope docs build",
+        "preview:docs": "lerna run --scope docs preview"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.4.4",
