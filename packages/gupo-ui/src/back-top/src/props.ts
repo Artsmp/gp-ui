@@ -1,5 +1,5 @@
 import { makeNumericProp, makeStringProp } from 'vant/es/utils';
-import { ExtractPropTypes } from 'vue';
+import type { ExtractPropTypes } from 'vue';
 
 export const backTopProps = {
     visibilityHeight: makeNumericProp(200),

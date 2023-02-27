@@ -31,17 +31,32 @@
         "url": "https://github.com/Artsmp/gp-ui/issues"
     },
     "scripts": {
-        "test": "node ./__tests__/gupo-ui.test.js"
+        "build": "gulp --require @esbuild-kit/cjs-loader -f scripts/build/index.ts"
     },
     "peerDependencies": {
+        "vant": "^4.0.11",
         "vue": "^3.2.0"
     },
     "devDependencies": {
+        "@esbuild-kit/cjs-loader": "^2.4.2",
+        "@rollup/plugin-node-resolve": "^15.0.1",
+        "@types/fs-extra": "^11.0.1",
+        "@types/gulp": "^4.0.10",
         "@types/lodash-es": "^4.17.6",
+        "@vitejs/plugin-vue": "^4.0.0",
+        "@vitejs/plugin-vue-jsx": "^3.0.0",
+        "esbuild": "^0.17.10",
         "eslint": "^8.35.0",
+        "execa": "^7.0.0",
+        "fast-glob": "^3.2.12",
+        "fs-extra": "^11.1.0",
+        "gulp": "^4.0.2",
+        "rollup": "^3.17.3",
+        "rollup-plugin-esbuild": "^5.0.0",
         "unplugin-vue-components": "^0.24.0",
         "vant": "^4.0.11",
-        "vue": "^3.2.47"
+        "vue": "^3.2.47",
+        "vue-tsc": "^1.2.0"
     },
     "dependencies": {
         "@vant/use": "^1.5.0",

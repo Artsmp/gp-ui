@@ -9,7 +9,8 @@
         "commit": "npx git-cz",
         "bootstrap": "lerna bootstrap -- --hoist",
         "dev": "lerna run --scope play dev",
-        "pub:package": "lerna publish from-package --yes"
+        "pub:package": "lerna publish from-package --yes",
+        "build:vant": "lerna run --scope gupo-ui build"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.4.4",
