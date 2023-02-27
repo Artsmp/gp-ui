@@ -1,47 +1,50 @@
 {
-  "name": "gupo-ui",
-  "version": "0.0.0",
-  "description": "pro components based on vue3",
-  "keywords": [
-    "vue3",
-    "components",
-    "lib",
-    "ui",
-    "typescript",
-    "antdv",
-    "vant"
-  ],
-  "main": "index.js",
-  "author": "shenmengping <shen990206@gmail.com>",
-  "homepage": "https://github.com/Artsmp/gp-ui#readme",
-  "license": "MIT",
-  "files": [
-    "lib"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Artsmp/gp-ui.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Artsmp/gp-ui/issues"
-  },
-  "scripts": {
-    "test": "node ./__tests__/gupo-ui.test.js"
-  },
-  "peerDependencies": {
-    "vue": "^3.2.0"
-  },
-  "devDependencies": {
-    "@types/lodash-es": "^4.17.6",
-    "eslint": "^8.35.0",
-    "vant": "^4.0.11",
-    "vue": "^3.2.47"
-  },
-  "dependencies": {
-    "@vant/use": "^1.5.0",
-    "lodash-es": "^4.17.21"
-  }
+    "name": "gupo-ui",
+    "version": "0.0.0",
+    "description": "pro components based on vue3",
+    "keywords": [
+        "vue3",
+        "components",
+        "lib",
+        "ui",
+        "typescript",
+        "antdv",
+        "vant"
+    ],
+    "main": "lib/index.js",
+    "module": "es/index.mjs",
+    "types": "es/index.d.ts",
+    "author": "shenmengping <shen990206@gmail.com>",
+    "homepage": "https://github.com/Artsmp/gp-ui#readme",
+    "license": "MIT",
+    "files": [
+        "lib"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Artsmp/gp-ui.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Artsmp/gp-ui/issues"
+    },
+    "scripts": {
+        "test": "node ./__tests__/gupo-ui.test.js"
+    },
+    "peerDependencies": {
+        "vue": "^3.2.0"
+    },
+    "devDependencies": {
+        "@types/lodash-es": "^4.17.6",
+        "eslint": "^8.35.0",
+        "unplugin-vue-components": "^0.24.0",
+        "vant": "^4.0.11",
+        "vue": "^3.2.47"
+    },
+    "dependencies": {
+        "@vant/use": "^1.5.0",
+        "lodash-es": "^4.17.21"
+    }
 }

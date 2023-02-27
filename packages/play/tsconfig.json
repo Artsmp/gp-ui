@@ -18,6 +18,7 @@
         "src/**/*.d.ts",
         "src/**/*.tsx",
         "src/**/*.vue",
+        // 为了在这开发的时候能有提示
         "../../typings/**/*.d.ts"
     ],
     "references": [{ "path": "./tsconfig.node.json" }]
