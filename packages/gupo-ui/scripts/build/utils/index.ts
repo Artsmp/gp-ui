@@ -42,3 +42,20 @@ export const generateExternal = (options: { full: boolean }) => {
         );
     };
 };
+
+export const generatePaths = () => {
+    const paths = [
+        ['lodash-es', 'lodash'],
+        ['vant/es', 'vant/lib'],
+    ];
+
+    return (id: string) => {
+        for (const [oldPath, newPath] of paths) {
+            if (id.startsWith(oldPath)) {
+                return id.replace(oldPath, newPath);
+            }
+        }
+
+        return '';
+    };
+};

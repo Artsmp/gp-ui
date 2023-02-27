@@ -26,6 +26,7 @@ function getSideEffects(
     dirName: string,
     options: GpResolverOptions
 ): SideEffectsInfo | undefined {
+    console.log('dirName: ', dirName);
     // 是否加载
     const { importStyle = true } = options;
     if (!importStyle || isSSR) return;
@@ -47,7 +48,7 @@ export function GpResolver(
             // 判断解析的组件名称是不是当前组件库的
             if (name.startsWith('Gp')) {
                 // 获取到组件名称
-                const partialName = name.slice(4);
+                const partialName = name.slice(2);
                 return {
                     // 组件名称
                     name: partialName,

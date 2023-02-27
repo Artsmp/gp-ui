@@ -1,4 +1,7 @@
-import { parallel } from 'gulp';
-import { buildModules, buildFull, genTypes } from './tasks';
+import { parallel, series } from 'gulp';
+import { buildModules, buildFull, genTypes, clean, buildStyle } from './tasks';
 
-export default parallel(buildModules, buildFull, genTypes);
+export default series(
+    clean,
+    parallel(buildModules, buildFull, genTypes, buildStyle)
+);

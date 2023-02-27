@@ -1,19 +1,20 @@
 import path from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-// import Components from 'unplugin-vue-components/vite';
-// import { GpResolver } from 'gupo-ui/src/resolver';
+import Components from 'unplugin-vue-components/vite';
+import { VantResolver } from 'unplugin-vue-components/resolvers';
+import { GpResolver } from 'gupo-ui/es/resolver';
 
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
         vue(),
-        // Components({
-        //     // eslint-disable-next-line n/no-path-concat
-        //     include: `${__dirname}/**`,
-        //     resolvers: [GpResolver({ importStyle: 'scss' })],
-        //     dts: false,
-        // }),
+        Components({
+            // eslint-disable-next-line n/no-path-concat
+            include: `${__dirname}/**`,
+            resolvers: [VantResolver(), GpResolver({ importStyle: 'scss' })],
+            dts: false,
+        }),
     ],
     resolve: {
         alias: [

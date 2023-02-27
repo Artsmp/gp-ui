@@ -7,6 +7,7 @@ import esbuild from 'rollup-plugin-esbuild';
 import {
     compRoot,
     generateExternal,
+    generatePaths,
     outputCjs,
     outputEsm,
     target,
@@ -45,6 +46,7 @@ export async function buildModules() {
             preserveModulesRoot: 'src',
             sourcemap: true,
             entryFileNames: `[name].js`,
+            paths: generatePaths(),
         }),
     ]);
 }
