@@ -33,9 +33,9 @@ function getSideEffects(
 
     // 获取到副作用的路径
     if (importStyle === 'scss') {
-        return `gupo-ui/${moduleType}/${dirName}/style/scss`;
+        return `gupo-vant-ui/${moduleType}/${dirName}/style/scss`;
     } else {
-        return `gupo-ui/${moduleType}/${dirName}/style/index`;
+        return `gupo-vant-ui/${moduleType}/${dirName}/style/index`;
     }
 }
 
@@ -53,7 +53,7 @@ export function GpResolver(
                     // 组件名称
                     name: partialName,
                     // 从哪个路径导入，es/lib
-                    from: `gupo-ui/${moduleType}`,
+                    from: `gupo-vant-ui/${moduleType}`,
                     // 根据组件名称获取到对应的 css 导入路径。BackTop => es/back-top/style/index
                     sideEffects: getSideEffects(
                         kebabCase(partialName),

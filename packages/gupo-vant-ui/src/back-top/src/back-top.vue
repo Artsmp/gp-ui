@@ -10,7 +10,7 @@
             @click.stop="handleClick"
         >
             <slot>
-                <Button type="primary" icon="back-top" round vlib-back-top />
+                <Button type="primary" icon="back-top" round />
             </slot>
         </div>
     </transition>
