@@ -1,12 +1,12 @@
 # lerna 的使用
 
 1. 初始化 monorepo 仓库
-   1. 创建目录，进入目录后运行命令 `npx lerna init` 创建工程。
-   2. 安装依赖，查看 `package.json` 我们可以发现 `private` 字段被设置为 `true`，因为 `monorepo` 架构的整个工程我们肯定是不需要发布的。还有就是 yarn1.x 也要求如果用到了 workspace 的特性，就必须设置该属性为 true。
-   3. lerna.json 中的 packages 字段用来配置子包目录，支持 glob pattern 的模式。
+    1. 创建目录，进入目录后运行命令 `npx lerna init` 创建工程。
+    2. 安装依赖，查看 `package.json` 我们可以发现 `private` 字段被设置为 `true`，因为 `monorepo` 架构的整个工程我们肯定是不需要发布的。还有就是 yarn1.x 也要求如果用到了 workspace 的特性，就必须设置该属性为 true。
+    3. lerna.json 中的 packages 字段用来配置子包目录，支持 glob pattern 的模式。
 2. 新建组件库子包
-   1. 运行 lerna create xxx 命令，建立 xxx 子包
-   2. 也可以直接自己手动创建目录，例如 play 子包
+    1. 运行 lerna create xxx 命令，建立 xxx 子包
+    2. 也可以直接自己手动创建目录，例如 play 子包
 
 ## 两种 version 策略的选择
 
@@ -26,9 +26,9 @@
 
 ```json
 {
-  "scripts": {
-    "bootstrap": "lerna bootstrap -- --hoist"
-  }
+    "scripts": {
+        "bootstrap": "lerna bootstrap -- --hoist"
+    }
 }
 ```
 
@@ -44,11 +44,12 @@
 
 ```json
 {
-  "scripts": {
-    // ...
-    "dev": "lerna run --scope play dev"
-  }
+    "scripts": {
+        // ...
+        "dev": "lerna run --scope play dev"
+    }
 }
 ```
 
 为某个子包安装依赖：`yarn workspace @gupo/eslint-config add eslint-config-prettier eslint-plugin-prettier`
+为根空间安装依赖：`yarn add -DW xxx`

@@ -1,0 +1,16 @@
+body {
+    --gp-back-top-right: 40px;
+    --gp-back-top-bottom: 40px;
+    --gp-back-top-button-size: 40px;
+}
+
+.gp-back-top {
+    position: fixed;
+    right: var(--gp-back-top-right);
+    bottom: var(--gp-back-top-bottom);
+
+    .van-button[gp-back-top] {
+        width: var(--gp-back-top-button-size);
+        height: var(--gp-back-top-button-size);
+    }
+}
