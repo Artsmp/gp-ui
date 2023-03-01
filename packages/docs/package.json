@@ -27,8 +27,11 @@
         "vue": "^3.2.47"
     },
     "scripts": {
-        "dev": "vitepress dev .",
+        "dev": "vitepress dev . --host",
         "build": "vitepress build .",
         "preview": "vitepress preview ."
+    },
+    "dependencies": {
+        "@vant/touch-emulator": "^1.4.0"
     }
 }

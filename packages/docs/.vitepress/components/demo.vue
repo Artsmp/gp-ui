@@ -5,6 +5,7 @@ import UnExpand from './icons/UnExpand.vue';
 import Expand from './icons/Expand.vue';
 import CopySuccess from './icons/CopySuccess.vue';
 import Copy from './icons/Copy.vue';
+import MobileModal from './mobile-modal.vue';
 
 const props = defineProps<{
     demos: object;
@@ -67,21 +68,33 @@ onMounted(() => {
 });
 
 watch(showSource, changeHeight);
+
+const isMobile = computed(() => {
+    return location.pathname.includes('vant');
+});
+
+const vis = ref(false);
 </script>
 
 <template>
     <div>
         <p v-html="decodedDescription" />
         <div class="doc-demo">
-            <ClientOnly>
-                <div class="doc-demo__show">
+            <div class="doc-demo__show">
+                <template v-if="formatPathDemos[props.path]">
                     <component
+                        v-if="!isMobile"
                         :is="formatPathDemos[props.path]"
-                        v-if="formatPathDemos[props.path]"
                         v-bind="$attrs"
                     />
-                </div>
-            </ClientOnly>
+                    <button class="demo-btn" v-else @click="vis = true">
+                        点击查看移动端demo
+                    </button>
+                </template>
+            </div>
+            <MobileModal v-model:visible="vis">
+                <component :is="formatPathDemos[props.path]" v-bind="$attrs" />
+            </MobileModal>
             <div class="doc-demo__opt" :class="showSource && 'show'">
                 <div class="doc-demo__opt--wrapper">
                     <Expand
@@ -111,6 +124,19 @@ watch(showSource, changeHeight);
 
     .doc-demo__show {
         padding: 16px;
+        .demo-btn {
+            padding: 8px 12px;
+            border: 1px solid var(--vp-button-brand-border);
+            border-radius: 4px;
+            color: var(--vp-button-brand-text);
+            background-color: var(--vp-button-brand-bg);
+            font-size: 14px;
+            &:hover {
+                border-color: var(--vp-button-brand-hover-border);
+                color: var(--vp-button-brand-hover-text);
+                background-color: var(--vp-button-brand-hover-bg);
+            }
+        }
     }
 
     .doc-demo__opt {

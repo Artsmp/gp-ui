@@ -19,7 +19,7 @@
 
 <style scoped>
 .outer {
-    height: 200px;
+    height: 100%;
     overflow-y: auto;
 }
 </style>
