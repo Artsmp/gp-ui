@@ -3,18 +3,14 @@ html {
     font-size: 4px;
 }
 
-body {
-    font-size: 16px;
-}
-
 pre {
     font-size: 14px;
 }
 
 :root {
     /* vitepress css var  */
-    --vp-c-bg: #f1f0ea;
-    --vp-sidebar-bg-color: #f1f0ea;
+    --vp-c-bg: #ffff;
+    --vp-sidebar-bg-color: #fff;
 
     /* prism css var change code theme */
     --prism-scheme: dark;
@@ -46,4 +42,21 @@ pre {
 .dark {
     --vp-c-bg: #1e1e20;
     --vp-sidebar-bg-color: #161618;
+}
+
+/* 下面这一块为了排除antdv带来的全局样式影响--zzdx */
+body {
+    font-family: var(--van-base-font) !important;
+    font-size: 14px !important;
+    color: var(--vp-c-text-1) !important;
+    background-color: var(--vp-c-bg) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--vp-c-text-1) !important;
 }

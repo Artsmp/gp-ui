@@ -54,6 +54,7 @@ onClickOutside(mobile, () => {
     transform: scale(1);
     width: 375px;
     height: 80%;
+    max-height: 667px;
     margin: 0 auto;
     padding: 16px;
     background-color: var(--vp-c-bg);

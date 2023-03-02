@@ -1,13 +1,16 @@
 import path from 'path';
 import { defineConfig } from 'vite';
 import Components from 'unplugin-vue-components/vite';
-import { VantResolver } from 'unplugin-vue-components/resolvers';
+import {
+    VantResolver,
+    AntDesignVueResolver,
+} from 'unplugin-vue-components/resolvers';
 import { GpResolver } from 'gupo-vant-ui/lib/resolver';
 
 export default defineConfig({
     // 不能排除掉vant：https://github.com/vuejs/vitepress/issues/1465
     ssr: {
-        noExternal: 'vant',
+        noExternal: ['vant', 'ant-design-vue'],
     },
     resolve: {
         alias: [
@@ -39,20 +42,13 @@ ${scriptSetup}
 `;
             },
         },
-        {
-            name: 'vitepress-layout-slots-fix',
-            enforce: 'pre',
-            transform(code, id) {
-                if (id.includes('Layout.vue') && !id.endsWith('.css'))
-                    return code.replace(
-                        '<VPFooter />',
-                        '<VPFooter />\n<slot name="layout-bottom" />'
-                    );
-            },
-        },
         Components({
             include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-            resolvers: [VantResolver(), GpResolver({ importStyle: 'scss' })],
+            resolvers: [
+                VantResolver(),
+                GpResolver({ importStyle: 'scss' }),
+                AntDesignVueResolver({ importStyle: 'less' }),
+            ],
             dts: false,
         }),
     ],
